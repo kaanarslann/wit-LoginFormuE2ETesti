@@ -83,6 +83,7 @@ export default function Login() {
         <Input
           id="exampleEmail"
           name="email"
+          data-cy="email"
           placeholder="Enter your email"
           type="email"
           onChange={handleChange}
@@ -96,6 +97,7 @@ export default function Login() {
         <Input
           id="examplePassword"
           name="password"
+          data-cy="password"
           placeholder="Enter your password "
           type="password"
           onChange={handleChange}
@@ -110,6 +112,7 @@ export default function Login() {
         <Input
           id="terms"
           name="terms"
+          data-cy="terms"
           checked={form.terms}
           type="checkbox"
           disabled={!emailRegex.test(form.email) || form.password.length < 4}
@@ -121,7 +124,7 @@ export default function Login() {
         </Label>
       </FormGroup>
       <FormGroup className="text-center p-4">
-        <Button color="primary" disabled={!isValid}>
+        <Button type="submit" color="primary" disabled={!isValid}>
           Sign In
         </Button>
       </FormGroup>
